@@ -1,0 +1,39 @@
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ .Site.BaseURL }}#business",
+  "name": "Göc Fenster Rheinfelden",
+  "image": "{{ .Site.BaseURL }}{{ .Site.Params.default_sharing_image }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jacob-Kaiser-Weg 3",
+    "addressLocality": "Rheinfelden",
+    "postalCode": "79618",
+    "addressRegion": "BW",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.5596,
+    "longitude": 7.7886
+  },
+  "telephone": "+4976239995",
+  "email": "gocfensterbau@hotmail.de",
+  "url": "{{ .Site.BaseURL }}",
+  "openingHours": "Mo-Fr 08:00-17:00",
+  "priceRange": "€€"
+}
+</script>
+
+<!-- Google Analytics 4 (wird nach Einrichtung der GA4 Property aktiviert) -->
+{{ with site.Config.Services.GoogleAnalytics.ID }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+</script>
+{{ end }}

@@ -1,0 +1,86 @@
+/* Göc Fenster — Custom Styles */
+/* Handwerker-Design: klar, direkt, keine Spielereien */
+
+/* Telefon sticky auf Mobile */
+@media (max-width: 768px) {
+  .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #1a56db;
+    padding: 8px 0;
+  }
+  .top-bar a {
+    color: #fff !important;
+    font-size: 1.1rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+/* Hero-Titel fett */
+.home-carousel h1 {
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* CTA-Buttons */
+.btn-template-primary {
+  background: #1a56db;
+  border-color: #1a56db;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.btn-template-primary:hover {
+  background: #1649b5;
+  border-color: #1649b5;
+}
+
+/* Telefon-Button auf Mobile */
+@media (max-width: 768px) {
+  .phone-call-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    background: #1a56db;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+}
+
+/* WhatsApp-Button auf Mobile */
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: #25D366;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+}
+
+/* Content-Bereich */
+.box-simple {
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding: 30px;
+  margin-bottom: 30px;
+}

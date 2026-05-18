@@ -1,0 +1,15 @@
+# Hugo build directory
+public/
+.hugo_build.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (falls später)
+node_modules/

@@ -1,0 +1,136 @@
+# =============================================================
+# Göc Fenster Rheinfelden — Hugo Website Konfiguration
+# =============================================================
+baseurl = "https://www.goc-fenster.de/"
+title = "Göc Fenster Rheinfelden"
+theme = "hugo-universal"
+languageCode = "de-de"
+defaultContentLanguage = "de"
+
+summaryLength = 70
+pluralizelisttitles = false
+
+[services]
+  [services.googleAnalytics]
+    id = ""  # GA4 via eigenes Template (nicht hier)
+
+[pagination]
+  pagerSize = 10
+
+# ── Navigation ──────────────────────────────────────────────
+[menu]
+[[menu.main]]
+  name = "Startseite"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Leistungen"
+  url = "/leistungen/"
+  weight = 2
+
+[[menu.main]]
+  name = "Referenzen"
+  url = "/referenzen/"
+  weight = 3
+
+[[menu.main]]
+  name = "Über uns"
+  url = "/ueber-uns/"
+  weight = 4
+
+[[menu.main]]
+  name = "Angebot"
+  url = "/angebot/"
+  weight = 5
+
+[[menu.main]]
+  name = "Kontakt"
+  url = "/kontakt/"
+  weight = 6
+
+# Topbar: Telefon immer sichtbar
+[[menu.topbar]]
+  weight = 1
+  name = "07623 9995"
+  url = "tel:+4976239995"
+  pre = "<i class='fas fa-phone'></i>"
+
+# ── SEO & Meta ──────────────────────────────────────────────
+[params]
+  author = "Göc Fenster Rheinfelden"
+  defaultKeywords = ["Fenster Rheinfelden", "Fensterbau Rheinfelden", "Fensterbauer Rheinfelden", "Göc Fenster", "Fenster", "Türen", "Rollläden"]
+  mainSections = ["leistungen", "referenzen"]
+  defaultDescription = "Fenster und Türen vom Meisterbetrieb in Rheinfelden seit 2003. Kostenlose Beratung, fachgerechte Montage, 5 Jahre Garantie. Jetzt anrufen: 07623 9995"
+
+  default_sharing_image = "img/social-preview.jpg"
+  viewMorePostLink = ""
+
+  # Google Maps
+  enableGoogleMaps = true
+  googleMapsApiKey = ""  # TODO: Google Maps API Key einrichten
+  latitude = "47.5596"
+  longitude = "7.7886"
+
+  # Design
+  style = "blue"
+
+  # Kontaktformular — leitet direkt an E-Mail
+  formspree_action = ""
+  contact_form_ajax = false
+
+  about_us = """<p>Fenster und Türen vom Meisterbetrieb in Rheinfelden.
+    <br>Seit 2003 stehen wir für Qualität, faire Preise und fachgerechte Montage.
+    <br><strong>Kostenlose Beratung — rufen Sie an: 07623 9995</strong></p>"""
+
+  copyright = "© 2026 Göc Fenster Rheinfelden • Jacob-Kaiser-Weg 3 • 79618 Rheinfelden"
+
+  date_format = "02. January 2006"
+  dropdown_mouse_over = false
+
+  disabled_logo = true
+  logo_text = "Göc Fenster"
+  logo = ""
+  logo_small = ""
+
+  contact_url = "/kontakt/"
+  address = """<p><strong>Göc Fenster Rheinfelden</strong>
+    <br>Jacob-Kaiser-Weg 3
+    <br>79618 Rheinfelden
+    <br>
+    <br>📞 <a href='tel:+4976239995'>07623 9995</a>
+    <br>📱 <a href='https://wa.me/4915111628974'>WhatsApp</a>
+    <br>✉️ <a href='mailto:gocfensterbau@hotmail.de'>gocfensterbau@hotmail.de</a>
+  </p>"""
+
+[permalinks]
+  leistungen = "/leistungen/:contentbasename/"
+  referenzen = "/referenzen/:contentbasename/"
+
+# ── Topbar ──────────────────────────────────────────────────
+[params.topbar]
+  enable = true
+  text = """<p>
+    <a href='tel:+4976239995'><i class='fas fa-phone'></i> 07623 9995</a> &nbsp;&nbsp;
+    <a href='https://wa.me/4915111628974'><i class='fab fa-whatsapp'></i> WhatsApp</a> &nbsp;&nbsp;
+    <a href='mailto:gocfensterbau@hotmail.de'><i class='fas fa-envelope'></i> E-Mail</a>
+  </p>"""
+
+# ── Carousel-Einstellungen ──────────────────────────────────
+[params.carouselCustomers]
+  items = 1
+  auto_play = true
+  slide_speed = 4000
+  pagination_speed = 1000
+
+[params.carouselTestimonials]
+  items = 1
+  auto_play = true
+  slide_speed = 5000
+  pagination_speed = 1000
+
+# ── Widgets (Sidebar deaktiviert) ──────────────────────────
+[params.widgets]
+  categories = false
+  tags = false
+  search = false
