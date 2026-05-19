@@ -15,7 +15,7 @@
 <meta name="twitter:title" content="{{ .Title }} — Göc Fenster Rheinfelden">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.defaultDescription }}{{ . }}{{ end }}{{ end }}">
 
-<!-- Schema.org LocalBusiness -->
+<!-- Schema.org LocalBusiness with AggregateRating -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -23,6 +23,7 @@
   "@id": "{{ .Site.BaseURL }}#business",
   "name": "Göc Fenster Rheinfelden",
   "image": "{{ .Site.BaseURL }}{{ .Site.Params.default_sharing_image }}",
+  "description": "Meisterbetrieb für Fenster, Türen und Rollläden in Rheinfelden seit 2003",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Jacob-Kaiser-Weg 3",
@@ -40,6 +41,34 @@
   "email": "gocfensterbau@hotmail.de",
   "url": "{{ .Site.BaseURL }}",
   "openingHours": "Mo-Fr 08:00-17:00",
-  "priceRange": "€€"
+  "priceRange": "€€",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Rheinfelden"
+    },
+    {
+      "@type": "City",
+      "name": "Lörrach"
+    },
+    {
+      "@type": "City",
+      "name": "Bad Säckingen"
+    },
+    {
+      "@type": "City",
+      "name": "Schopfheim"
+    },
+    {
+      "@type": "City",
+      "name": "Basel"
+    }
+  ]
 }
 </script>
+
+<!-- Review & AggregateRating Schema (included from partial) -->
+{{ partial "review-schema.html" . }}
+
+<!-- FAQ Schema (included from partial) -->
+{{ partial "faq-schema.html" . }}

@@ -1,0 +1,52 @@
+<!-- Schema.org AggregateRating & Reviews (if on Referenzen page) -->
+{{ if eq .Type "page" }}
+  {{ if in .File.Path "referenzen" }}
+    {{ with readDir "data/testimonials" }}
+      {{ $totalRating := 0 }}
+      {{ $reviewCount := 0 }}
+      {{ $reviews := slice }}
+
+      {{ range . }}
+        {{ $data := include (printf "data/testimonials/%s" .Name) | unmarshal }}
+        {{ if $data.stars }}
+          {{ $totalRating = add $totalRating $data.stars }}
+          {{ $reviewCount = add $reviewCount 1 }}
+          {{ $reviews = append $reviews $data }}
+        {{ end }}
+      {{ end }}
+
+      {{ if gt $reviewCount 0 }}
+        {{ $avgRating := div $totalRating $reviewCount }}
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "{{ .Site.BaseURL }}#business",
+          "name": "Göc Fenster Rheinfelden",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": {{ $avgRating }},
+            "reviewCount": {{ $reviewCount }}
+          },
+          "review": [
+            {{ range $i, $review := $reviews }}
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": {{ $review.stars }}
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "{{ $review.name }}"
+                },
+                "reviewBody": "{{ $review.text }}"
+              }{{ if lt (add $i 1) (len $reviews) }},{{ end }}
+            {{ end }}
+          ]
+        }
+        </script>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
