@@ -1,7 +1,8 @@
 +++
 title = "Kostenloses Angebot"
 type = "page"
-description = "Kostenloses und unverbindliches Angebot für neue Fenster und Türen in Rheinfelden. Jetzt anfordern — Rückmeldung in 24h."
+description = "Kostenlos & unverbindlich: Angebot für Fenster & Türen in Rheinfelden. Vor-Ort-Messung & Festpreis. Antwort innerhalb 24 Stunden garantiert."
+keywords = ["Fensterangebot kostenlos", "Türangebot", "Angebotserstellung", "Festpreis Fenster", "Fensterkaufen"]
 +++
 
 # Ihr kostenloses Angebot

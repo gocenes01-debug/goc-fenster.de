@@ -1,7 +1,8 @@
 +++
 title = "Über uns"
 type = "page"
-description = "Göc Fenster Rheinfelden — Familienbetrieb seit 2003. Erfahren Sie mehr über uns und unser Team."
+description = "Göc Fenster: Meisterbetrieb seit 2003 in Rheinfelden. Familiengeführt, über 20 Jahre Fensterbau-Erfahrung. Persönliche Beratung & Qualitätsarbeit im Dreiländereck."
+keywords = ["Meisterbetrieb Rheinfelden", "Fensterbauer", "Familie Göc", "Qualitätshandwerk", "Dreiländereck"]
 +++
 
 # Über Göc Fenster Rheinfelden

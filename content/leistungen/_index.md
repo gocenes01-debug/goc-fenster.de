@@ -1,7 +1,8 @@
 +++
 title = "Leistungen"
 type = "page"
-description = "Fenster, Türen und Rollläden in Rheinfelden: Unsere Leistungen im Überblick. Kostenlose Beratung vor Ort."
+description = "Fenster, Türen & Rollläden vom Meisterbetrieb Göc Rheinfelden. Kunststoff-, Alu- & Holz-Fenster mit 5 Jahren Garantie. Kostenlose Beratung & fachgerechte Montage."
+keywords = ["Fenster Rheinfelden", "Haustüren Rheinfelden", "Rollläden", "Fenstermontage", "Kunststofffenster", "Aluminiumfenster"]
 +++
 
 # Das machen wir für Sie

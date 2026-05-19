@@ -1,7 +1,8 @@
 +++
 title = "Referenzen"
 type = "page"
-description = "Referenzen und Kundenstimmen von Göc Fenster Rheinfelden. Fensterbau Projekte in Rheinfelden und Umgebung."
+description = "Kundenbewertungen & Referenzen von Göc Fenster Rheinfelden. Fensterbau-Projekte & Montagen in Rheinfelden, Lörrach & Schopfheim. 20+ Jahre Erfahrung."
+keywords = ["Kundenbewertungen Fenster", "Fensterbau Referenzen", "Zufriedene Kunden", "Fenstermontage Rheinfelden"]
 +++
 
 # Das sagen unsere Kunden
