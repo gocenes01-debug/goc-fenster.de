@@ -40,6 +40,11 @@ pluralizelisttitles = false
   weight = 4
 
 [[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 4.5
+
+[[menu.main]]
   name = "Über uns"
   url = "/ueber-uns/"
   weight = 5
@@ -65,7 +70,7 @@ pluralizelisttitles = false
 [params]
   author = "Göc Fenster Rheinfelden"
   defaultKeywords = ["Fenster Rheinfelden", "Fensterbau Rheinfelden", "Fensterbauer Rheinfelden", "Göc Fenster", "Fenster", "Türen", "Rollläden"]
-  mainSections = ["leistungen", "referenzen"]
+  mainSections = ["blog", "leistungen", "referenzen"]
   defaultDescription = "Fenster und Türen vom Meisterbetrieb in Rheinfelden seit 2003. Kostenlose Beratung, fachgerechte Montage, 5 Jahre Garantie. Jetzt anrufen: 07623 9995"
 
   default_sharing_image = "img/social-preview.jpg"
