@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+    {{ partial "seo.html" . }}
+  </head>
+  <body>
+    {{ partial "nav.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+    <!-- GA4 Event Tracking -->
+    <script defer src="/js/ga4-events.js"></script>
+  </body>
+</html>

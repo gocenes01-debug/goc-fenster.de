@@ -27,13 +27,17 @@
 }
 </script>
 
-<!-- Google Analytics 4 (wird nach Einrichtung der GA4 Property aktiviert) -->
+<!-- Google Analytics 4 (GDPR compliant) -->
 {{ with site.Config.Services.GoogleAnalytics.ID }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ . }}');
+  gtag('config', '{{ . }}', {
+    'anonymize_ip': true,
+    'allow_google_signals': false,
+    'allow_ad_personalization_signals': false
+  });
 </script>
 {{ end }}

@@ -12,7 +12,8 @@ pluralizelisttitles = false
 
 [services]
   [services.googleAnalytics]
-    id = ""  # GA4 via eigenes Template (nicht hier)
+    id = ""  # TODO: GA4 Measurement ID eintragen (Format: G-XXXXXXXXXX)
+             # Setup Guide: GA4_EVENT_TRACKING.md
 
 [pagination]
   pagerSize = 10
