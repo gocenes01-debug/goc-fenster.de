@@ -1,0 +1,79 @@
+<!-- Schema.org Service (for services pages) -->
+{{ if eq .Type "page" }}
+  {{ if in .File.Path "leistungen" }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "{{ .Site.BaseURL }}#business",
+      "name": "Göc Fenster Rheinfelden",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Fensterbau & Türen Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kunststoff-Fenster",
+              "description": "Maßgefertigte Kunststoff-Fenster für Neubau und Sanierung mit 3-fach Verglasung und 5 Jahren Garantie",
+              "areaServed": ["Rheinfelden", "Lörrach", "Bad Säckingen", "Schopfheim", "Basel"],
+              "priceRange": "€€"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aluminium-Fenster",
+              "description": "Extrem stabile Alu-Fenster mit schlanken Profilen und modernem Design",
+              "areaServed": ["Rheinfelden", "Lörrach", "Bad Säckingen", "Schopfheim", "Basel"],
+              "priceRange": "€€€"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Holz-Fenster",
+              "description": "Hochwertige Holz-Fenster mit natürlicher Optik und bester Wärmeisolation",
+              "areaServed": ["Rheinfelden", "Lörrach", "Bad Säckingen", "Schopfheim", "Basel"],
+              "priceRange": "€€€"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Haustüren & Nebeneingangstüren",
+              "description": "Sichere und wärmegedämmte Türen in Alu oder Kunststoff",
+              "areaServed": ["Rheinfelden", "Lörrach", "Bad Säckingen", "Schopfheim", "Basel"],
+              "priceRange": "€€"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rollläden & Insektenschutz",
+              "description": "Aufsatz- und Vorbaurollläden mit elektrischer oder manueller Steuerung",
+              "areaServed": ["Rheinfelden", "Lörrach", "Bad Säckingen", "Schopfheim", "Basel"],
+              "priceRange": "€"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reparatur & Wartung",
+              "description": "Schnelle und günstige Reparaturen für Fenster aller Marken",
+              "areaServed": ["Rheinfelden", "Lörrach", "Bad Säckingen", "Schopfheim", "Basel"],
+              "priceRange": "€"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+  {{ end }}
+{{ end }}

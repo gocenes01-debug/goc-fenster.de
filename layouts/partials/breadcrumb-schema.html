@@ -1,0 +1,39 @@
+<!-- Schema.org BreadcrumbList -->
+{{ if and .IsPage (ne .Type "home") }}
+  {{ $breadcrumbs := slice }}
+  {{ $breadcrumbs = append $breadcrumbs (dict "name" "Startseite" "url" .Site.BaseURL "position" 1) }}
+
+  {{ with .File.Path }}
+    {{ $sections := split . "/" }}
+    {{ if gt (len $sections) 2 }}
+      {{ range $i, $section := (first (sub (len $sections) 2) $sections) }}
+        {{ if ne $section "content" }}
+          {{ $position := add $i 2 }}
+          {{ $name := title (replace $section "-" " ") }}
+          {{ $url := printf "%s%s/" .Site.BaseURL $section }}
+          {{ $breadcrumbs = append $breadcrumbs (dict "name" $name "url" $url "position" $position) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $lastPos := len $breadcrumbs }}
+  {{ $breadcrumbs = append $breadcrumbs (dict "name" .Title "url" .Permalink "position" (add $lastPos 1)) }}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{ range $breadcrumbs }}
+        {
+          "@type": "ListItem",
+          "position": {{ .position }},
+          "name": "{{ .name }}",
+          "item": "{{ .url }}"
+        }{{ if ne .position (len $breadcrumbs) }},{{ end }}
+      {{ end }}
+    ]
+  }
+  </script>
+{{ end }}
